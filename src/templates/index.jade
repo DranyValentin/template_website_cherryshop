@@ -1,0 +1,58 @@
+doctype html
+html
+	head(lang='en')
+		title Hello world!
+		meta(charset='utf-8')
+	body
+		header
+			.accout 
+				form
+					label Language
+						select
+							option 1
+							option 2
+					label Currency - 
+						select
+							option USA
+							option EUR
+							option UAH
+				div
+					ul
+						li 
+							a(href='#') MyAccount
+						li 
+							a(href='#') Wish List (0)
+			.search
+				div
+					a(href='#', title="Website CherryShop")
+						h1 Cherry
+							small Shop top of the fashion
+				div
+					form
+						input(type='text', placeholder='Search...')
+						button Ok
+					div
+						ul
+							li
+								a(href='#') Welcome Login
+							li 
+								a(href='#') Create an account
+							li 
+								a(href='#') 0 item(s) - $0.00
+			nav
+				ul
+					each val, index in ['Electronics', 'Parts & Accessories', 'Components', 'Fashion', 'Interiors', 'Kitchen', 'House Holds']
+						li
+							a(href='#')= val
+
+		main
+		footer
+			div
+				h2 About Store
+				p electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishingelectronic typesetting,  It was popularised in the 1960s with the release of Letraset 
+			nav
+				ul
+					each val, index in ['About Us', 'Delivery Information', 'Privacy Policy', 'Terms & Conditions', 'About Us', 'About Us', 'Delivery Information']
+						li
+							a(href='#')= val
+		
