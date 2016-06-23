@@ -3,56 +3,79 @@ html
 	head(lang='en')
 		title Hello world!
 		meta(charset='utf-8')
+		link(rel="stylesheet", href="/css/font-awesome.min.css")
+		link(rel="stylesheet", href="/css/mainstyle.min.css")
+		
+		
 	body
 		header
-			.accout 
-				form
-					label Language
-						select
-							option 1
-							option 2
-					label Currency - 
-						select
-							option USA
-							option EUR
-							option UAH
-				div
-					ul
-						li 
-							a(href='#') MyAccount
-						li 
-							a(href='#') Wish List (0)
-			.search
-				div
-					a(href='#', title="Website CherryShop")
-						h1 Cherry
-							small Shop top of the fashion
-				div
-					form
-						input(type='text', placeholder='Search...')
-						button Ok
-					div
-						ul
-							li
-								a(href='#') Welcome Login
+			.wrap_Account
+				.account 
+					.wrap_Lang_Currency
+						.language
+							p Language 
+							ul(class="menu_Lang")
+								li
+									i(class="fa fa-angle-down")
+									ul
+										li 1
+										li 2
+						.currency
+							p Currency - 
+							ul(class="menu_Currency")
+								li
+									i(class="fa fa-angle-down")
+									ul
+										li USD
+										li EUR
+										li UAH
+					.my_Account
+						ul(class="menu_My_Account")
 							li 
-								a(href='#') Create an account
+								a(href='#') MyAccount
 							li 
-								a(href='#') 0 item(s) - $0.00
-			nav
-				ul
+								a(href='#') Wish List (0)
+			.wrap_Logo_Search
+				.logo_And_Search
+					.logo
+						a(href='#', title="Website CherryShop")
+							h1 Cherry<small>Shop </small><b>top of the fashion</b>
+					.search
+						form
+							input(class="field_Search" type='text', placeholder='Search...')
+							button(class="but_Search")
+								i(class="fa fa-search")
+						.wrap_Welcome_Log_And_Cart
+							ul(class="welcome_Login")
+								li
+									a(href='#') Welcome Login
+								li 
+									a(href='#') Create an account
+							.cart 
+								a(href='#')
+									<i class="fa fa-shopping-cart"></i> 0 item(s) - $0.00
+			nav(class="nav")
+				ul(class="menu")
 					each val, index in ['Electronics', 'Parts & Accessories', 'Components', 'Fashion', 'Interiors', 'Kitchen', 'House Holds']
 						li
 							a(href='#')= val
-
-		main
-		footer
-			div
-				h2 About Store
-				p electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishingelectronic typesetting,  It was popularised in the 1960s with the release of Letraset 
-			nav
-				ul
-					each val, index in ['About Us', 'Delivery Information', 'Privacy Policy', 'Terms & Conditions', 'About Us', 'About Us', 'Delivery Information']
-						li
-							a(href='#')= val
+		main(class="main_Section")
+			.slider
+				.desc_Banner
+					-
+						list = ['Try our new Collection',
+								'inspired from the cold nature',
+								'exclusive in our store']
+					each desc in list
+						p= desc
+		footer(class="footer")
+			.wrap_Footer
+				.about
+					h2 About Store
+					p electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishingelectronic typesetting,  It was popularised in the 1960s with the release of Letraset 
+				nav(class="nav_Footer")
+					ul
+						each val, index in ['About Us', 'Delivery Information', 'Privacy Policy', 'Terms & Conditions', 'About Us', 'About Us', 'Delivery Information']
+							li
+								a(href='#')= val
 		

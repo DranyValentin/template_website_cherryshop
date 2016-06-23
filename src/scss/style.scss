@@ -1,0 +1,341 @@
+@import "includes/settings";
+
+
+// style Header
+	//style first div class=wrap_Account
+
+header
+{
+	display: flex;
+	flex-direction: column;
+
+	padding-bottom: 2px;
+	margin-bottom: 4px;
+	box-shadow: 0 3px 5px #cdcdcd;
+}
+
+.wrap_Account
+{
+	display: flex;
+	justify-content: center;
+
+	color: $mainTextColor;
+
+	background: #f5f5f5;
+	box-shadow: 0 2px 2px #d6d6d6;
+}
+
+.account
+{
+	display: flex;
+
+	width: $width;
+
+	padding: 10px 0;
+}
+
+.wrap_Lang_Currency,
+.my_Account
+{
+	width: 50%;
+}
+
+.currency
+{
+	padding-left: 25px;
+}
+
+.menu_Lang
+{
+	padding-left: 15px;
+}
+
+.menu_Lang ul,
+.menu_Currency ul
+{
+	display: none;	
+}
+
+.my_Account
+{
+	text-align: right;
+}
+
+.menu_My_Account li:first-child
+{
+	padding-right: 5px;
+	border-right: 1px solid #c8c8c8;	
+}
+
+	//style first div class=wrap_Logo_Search
+.wrap_Logo_Search
+{
+	display: flex;
+	justify-content: center;
+}
+
+.logo_And_Search
+{
+	display: flex;
+	flex-wrap: wrap;
+
+	width: $width;
+	margin: 30px 0;
+}
+
+.logo,
+.search
+{
+	width: 50%;
+	min-width: 300px;
+}
+
+@media (max-width: 650px)
+{
+	.logo,
+	.search
+	{
+		width: 100%;
+	}
+
+	.logo
+	{
+		text-align: center;
+	}
+}
+
+// style logo
+.logo h1
+{
+	display: inline-block;
+	width: 280px;
+
+	font-size: $fontSize+25;
+	color: $logoTextColor;
+
+	text-transform: uppercase;
+	text-align: center;
+	text-shadow: 1px 1px 3px #bbb;
+	line-height: 20px;
+
+	padding: 30px 0;
+}
+
+.logo small
+{
+	font-weight: 700;
+}
+
+.logo b
+{
+	font-size: $fontSize+1;
+	color: #90c7a6;
+
+	letter-spacing: 3px;
+}
+
+// style search
+
+.search
+{
+	text-align: right;
+}
+
+.field_Search
+{
+	width: 260px;
+	height: 30px;
+
+	background: #f5f5f5;
+
+	padding: 0 10px;
+}
+
+.but_Search
+{
+	width: 40px;
+	height: 30px;	
+}
+
+.wrap_Welcome_Log_And_Cart
+{
+	display: flex;
+	justify-content: flex-end;
+	flex-wrap: wrap;
+	align-items: center;
+	color: $mainTextColor;
+	//padding: 15px;
+	margin-top: 10px;
+	
+}
+
+.welcome_Login li:first-child
+{
+	padding-right: 5px;
+	border-right: 1px solid #c8c8c8;	
+}
+
+.cart
+{
+	border-left: 1px solid #c8c8c8;
+	padding: 0 0 0 10px;
+	margin-left: 10px;
+}
+
+.fa-shopping-cart
+{
+	color: #fff;
+	background: #8fd0a9;
+	padding: 15px;
+	border-radius: 50%;
+}
+
+// style navigation menu
+
+.nav
+{
+	display: flex;
+	justify-content: center;
+
+	background: #8fd0a9;
+}
+
+.menu
+{
+	text-align: center;
+}
+
+.menu a
+{
+	display: inline-block;
+
+	font-size: $fontSize+5;
+	color: #fff;
+	text-transform: uppercase;
+	text-shadow: 2px 2px 1px #72a586;
+
+	padding: 20px 10px;
+}
+
+.menu a:hover
+{
+	background: #5f7a87;
+}
+
+// style main
+main
+{
+	display: flex;
+	justify-content: center;
+}
+
+.slider
+{
+	width: $width;
+	
+	background: url(/img/banner.jpg) no-repeat;
+	background-size: 100% auto;
+}
+
+
+.desc_Banner
+{
+	width: 100%;
+	/*height: 442px;*/
+	
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+
+	padding: 11.5% 0;
+}
+
+.desc_Banner p
+{
+	width: 40%;
+
+	font-size: 2vw;
+	
+	text-transform: uppercase;
+	text-align: center;
+
+	padding: 10px;
+}
+
+@media (min-width: $width)
+{
+	.desc_Banner p
+	{
+		font-size: $fontSize + 6;
+	}
+}
+
+@media (max-width: 550px)
+{
+	.desc_Banner
+	{
+		padding: 9.5% 0;
+	}
+}
+
+// style footer
+.footer
+{
+	display: flex;
+	justify-content: center;
+
+	background: #3b5c6c;
+}
+
+.wrap_Footer
+{
+	width: $width;
+
+	display: flex;
+	flex-wrap: wrap;
+
+	color: #fff;
+}
+
+.about
+{
+	width: 74%;
+}
+
+.about h2
+{
+	font-size: $fontSize + 14
+}
+
+.about p
+{
+	width: 80%;
+	display: block;
+
+	font-size: $fontSize;
+	font-family: Arial;
+}
+
+.nav_Footer
+{
+	width: 26%;
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	background: rgba(255, 255, 255, 0.2);
+}
+
+.nav_Footer ul
+{
+	padding: 10px;
+}
+
+.nav_Footer li
+{
+	display: list-item;
+	
+	list-style-type: disc;
+	list-style-position: inside;
+
+	padding: 5px 0;
+}
