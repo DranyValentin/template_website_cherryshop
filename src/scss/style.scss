@@ -1,8 +1,7 @@
 @import "includes/settings";
 
-
 // style Header
-	//style first div class=wrap_Account
+//style first div class=wrap_Account
 
 header
 {
@@ -21,7 +20,7 @@ header
 
 	color: $mainTextColor;
 
-	background: #f5f5f5;
+	background: $accountBackgroundColor;
 	box-shadow: 0 2px 2px #d6d6d6;
 }
 
@@ -40,20 +39,58 @@ header
 	width: 50%;
 }
 
-.currency
+.wrap_Lang_Currency
 {
-	padding-left: 25px;
+	display: flex;
+	flex-wrap: wrap;
 }
 
-.menu_Lang
+.language
 {
-	padding-left: 15px;
+	padding: 2px 25px 0 0;	
+}
+
+.menu_Lang,
+.menu_Currency
+{
+	position: relative;
 }
 
 .menu_Lang ul,
 .menu_Currency ul
 {
+	position: absolute;
 	display: none;	
+	left: 0;
+	background: $accountBackgroundColor;
+}
+
+.menu_Lang li,
+.menu_Currency li
+{
+	text-transform: uppercase;
+}
+
+.menu_Lang ul li,
+.menu_Currency ul li
+{
+	display: block;
+
+	padding: 5px 7px;
+	box-shadow: 2px 2px 5px rgba(0,0,0,.2);
+}
+
+.menu_Lang li:hover,
+.menu_Currency li:hover
+{
+	background: #fff;
+	color: #000;
+	cursor: pointer;
+}
+
+.fa-angle-down
+{
+	padding-left: 5px;
 }
 
 .my_Account
@@ -135,7 +172,6 @@ header
 }
 
 // style search
-
 .search
 {
 	text-align: right;
@@ -166,7 +202,6 @@ header
 	color: $mainTextColor;
 	//padding: 15px;
 	margin-top: 10px;
-	
 }
 
 .welcome_Login li:first-child
@@ -191,7 +226,6 @@ header
 }
 
 // style navigation menu
-
 .nav
 {
 	display: flex;
@@ -241,7 +275,6 @@ main
 .desc_Banner
 {
 	width: 100%;
-	/*height: 442px;*/
 	
 	display: flex;
 	flex-direction: column;
