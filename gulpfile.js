@@ -1,5 +1,4 @@
 var gulp = require('gulp'),
-	concatCss = require('gulp-concat-css'),
 	rename = require('gulp-rename'),
 	cleanCSS = require('gulp-clean-css'),
 	autoprefixer = require('gulp-autoprefixer'),
@@ -44,20 +43,11 @@ gulp.task('scss', function ()
     .pipe(connect.reload())
 });
 
-// html
-gulp.task('html', function ()
-{
-	gulp.src('index.html')
-	.pipe(gulp.dest('dest/'))
-	.pipe(connect.reload())
-
-})
-
 // js
 gulp.task('js', function ()
 {
-	gulp.src('js/*.js')
-	.pipe(gulp.dest('dest/js'))
+	gulp.src('src/js/*.js')
+	.pipe(gulp.dest('dest/js/'))
 	.pipe(connect.reload())
 
 })
@@ -75,15 +65,13 @@ gulp.task('img', function ()
 gulp.task('watch', function ()
 {
 	gulp.watch('src/scss/*.scss', ['scss'])
-	gulp.watch('src/index.html', ['html'])
-	gulp.watch('scr/js/*.js', ['js'])
+	gulp.watch('src/js/*.js', ['js'])
 	gulp.watch('src/img/*.*', ['img'])
 	gulp.watch('src/templates/*.jade', ['jade'])
 })
 
 // default
 gulp.task('default', ['connect', 
-						'html',
 						'scss',
 						'js',
 						'img',
